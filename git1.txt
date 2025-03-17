@@ -1,28 +1,6 @@
-<template>
-	<view class="box">
-		<input type="text" v-model="preson.name "/>
-	</view>
-	{{preson}}
-</template>
-
-<script setup>
-import { ref, watch,} from "vue"
-const preson =ref({
-	name:"zhanghsan",
-	age:18
-});
-/*
-watch(()=>preson.value.name,(newValue)=>{
-	console.log(newValue);
-})
-*/
-watch(preson,(newValue)=>{
-	console.log(newValue)
-},{deep:true,immediate:true});
-</script>
-
-<style lang="scss" scoped>
-.box{
-	border: 1px solid red;
-}	       
-</style>
+git config --list//查看用户配置信息
+git init//初始化仓库
+git clone//克隆
+git add//添加		git add +(文件名)
+git commit//提交改变		git commit -m"........." + (文件名)
+git status//查看当前本地仓库状态
