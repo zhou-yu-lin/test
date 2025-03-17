@@ -1,0 +1,28 @@
+<template>
+	<view class="box">
+		<input type="text" v-model="preson.name "/>
+	</view>
+	{{preson}}
+</template>
+
+<script setup>
+import { ref, watch,} from "vue"
+const preson =ref({
+	name:"zhanghsan",
+	age:18
+});
+/*
+watch(()=>preson.value.name,(newValue)=>{
+	console.log(newValue);
+})
+*/
+watch(preson,(newValue)=>{
+	console.log(newValue)
+},{deep:true,immediate:true});
+</script>
+
+<style lang="scss" scoped>
+.box{
+	border: 1px solid red;
+}	       
+</style>
