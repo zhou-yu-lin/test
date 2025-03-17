@@ -1,6 +1,8 @@
 git config --list//查看用户配置信息
 git init//初始化仓库
 git clone//克隆
-git add//添加		git add +(文件名)
+git add//将暂存区文件修改提交到版本库中		git add +(文件名)
 git commit//提交改变		git commit -m"........." + (文件名)
 git status//查看当前本地仓库状态
+git log//查看日志
+git reset//将暂存区文件取消修改或者是切到指定版本 --hard(版本号)
