@@ -1,0 +1,22 @@
+git config --list//查看用户配置信息
+git init//初始化仓库
+git add//将工作区文件添加到暂存区		命令格式：git add +(文件名)
+git commit//提交改变		命令格式：git commit -m"........." + (文件名)
+git status//查看当前本地仓库状态
+git log//查看日志		q quit
+git reset//将暂存区文件取消修改或者是切到指定版本 --hard(版本号)
+git remote//查看远程仓库		-v//查看详细
+git remote add//添加远程库		命令格式：git remote add [short-name] <url>
+git clone//从远程仓库克隆
+git pull//从远程仓库拉取		命令格式：git pull [short-name] [branch-name]
+git push//推送到远程仓库		命令格式：git push [short-name] [branch-name]
+git branch//查看分支		
+git branch//创建分支			命令格式：git branch [name]
+git checkout//切换分支			命令格式：git checkout[name]
+git push//推送到远程仓库分支	命令格式：git push [short-name] [name]
+git merge//合并分支			命令格式：git merge [name]
+git branch//删除分支			命令格式：git branch -d [name]
+git tag//列出已有的标签		
+git tag//创建标签				命令格式：git tag [name]
+git push//将标签推送至远程仓库	命令格式：git push [shortName] [name]
+git checkout//检出标签			命令格式：git checkout -b [branch] [name]

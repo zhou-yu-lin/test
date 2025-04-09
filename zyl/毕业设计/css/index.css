@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../static/text/AlimamaDaoLiTi.woff2') format('woff2'),
+         url('../static/text/AlimamaDaoLiTi.woff') format('woff'),
+         url('../static/text/AlimamaDaoLiTi.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../img/background.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#qrModal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background:#ababab;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header img{
+    width: 20px;
+    height: 20px;
+}
+header ul{
+    height: 100%;
+}
+header li{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-bottom 0.3s;
+    border-bottom: 4px solid transparent;
+}
+header li:hover{
+    /* box-shadow: 5px 5px 20px rgba(200, 200, 200,0.5); */
+    border-bottom: 4px solid black;
+}
+.contactInformation{
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+#qrContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+#closeButton {
+    position: none;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#qrCode {
+    width: 250px; /* 根据需要调整二维码大小 */
+    height: 250px;
+    background-size: cover;
+}
+.contactInformation:hover{
+   transform: scale(1.2);
+}
+
+
+
+
+
+
+/* 侧边栏 */
+aside{
+    width: 10vw;
+    height: calc(100vh - 80px);
+    float: right;
+    padding: 20px;
+    position: fixed;
+    top: 80px;
+    right: 0;
+}
+aside ul{
+    padding: 10px;
+    margin: 10px;
+}
+aside li{
+    justify-content: center;
+    align-items: center;
+}
+    /* 轮播图 */
+    .vertical-carousel {
+        position: relative;
+        width: 100%;
+        height: 300px; 
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+    .carousel-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: top 0.5s ease;
+    }
+    .carousel-item {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-item img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .carousel-button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgba(255, 255, 255, 0.095);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .carousel-button.prev {
+        top: 10px;
+    }
+
+    .carousel-button.next {
+        bottom: 10px;
+    }
+    .carousel-indicators {
+        position: fixed;
+        right: 12vw;
+        top: 45vh;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 8px; 
+    }
+    .indicator {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .indicator.active {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+
+
+
+
+
+
+
+/* 主页内容 */
+main{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+}
+.personalData{
+    width: 50%;
+}
+.personalData li{
+    list-style-type: none;
+    margin: 10px;
+    margin-left: 40px;
+}
+.ye1{
+	display: flex;
+	height: 200px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+}
+#homepageContent img{
+    width: 100%;
+    height: 100%;
+}
+.boxblock{
+	width: 50%;
+}
+.content-area{
+	background-color: rgba(255, 255, 255,0.5);
+}
+
+/* 我的相册内容 */
+.photo{
+    display: flex;
+    flex-wrap: wrap;
+}
+.photoimg{
+    width: 45%;
+    height: 35vh;
+    margin: 20px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+.photoimg img:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* 半透明背景 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: #ccc;
+}
+.hidden{
+    display: none;
+}
+
+
+/* 我的日志内容 */
+details{
+    margin: 20px;
+    padding: 10px;
+}
+details p{
+    font-size: 18px;
+}
+
+
+/* 我的偶像 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+footer {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    background-color: #abbaba;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周雨林</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        p{
+            font-family: 'MyCustomFont',sans-serif;
+            font-size: 14px;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="qrModal">
+            <div id="qrContent">
+                <button id="closeButton">返回</button>
+                <div id="qrCode"></div>
+            </div>
+        </div>
+        <ul>
+            <div style="display: inline-flex; margin-left: 1vw; float: left;height: 80px;align-items: center;">
+                <img src="./img/头像.png" alt="头像" style="width:40px; height: 40px; border-radius: 50%; margin-left: 10vw; margin-top: 10px;">
+                <div style="font-size: 25px; margin-left: 10px;">周雨林</div>
+            </div>
+            <li onclick="changeContent('homepage')">主页</li>
+            <li onclick="changeContent('idol')">我的偶像</li>
+            <li onclick="changeContent('album')">我的相册</li>
+            <li onclick="changeContent('journal')">我的日志</li>
+            <li onclick="changeContent('music')">我的音乐</li>
+            <div style="display: inline-flex; margin-right: 5vw; float: right;height: 80px;align-items: center;">
+                <div id="QQ" class="contactInformation" onclick="openQQ()"><img src="./img/QQ.png" alt=""></div>
+                <div id="wx" class="contactInformation" onclick="openWeChat()"><img src="./img/wx.png" alt=""></div>
+                <div id="phoneNumber" class="contactInformation" ><img src="./img/联系电话.png" alt=""></div>
+            </div>
+        </ul>
+    </header>
+
+    <main>
+        <div style="margin-bottom: 60px;width: 830px;">
+
+            <div style="height: 80px;width: 100%;"></div>
+            
+            <div style="height: 50px;width: 100%;display: grid;grid-template-columns: 1fr 2fr;">
+                <div style="height: 5vh;">
+                    <div style="font-weight: 900;font-size: 24px;">我的驿站</div>
+                    <div style="font-style: italic;text-align: end;">——My Home</div>
+                </div>
+                <div style="display: flex;font-size: 24px;">
+                    <div id="dateDisplay" style="display: flex;padding-right: 10vw; justify-content: right;width: 100%;height: 100%;"></div>
+                </div>
+            </div>
+            
+            <div id="content" class="content-area">
+                
+                <!-- 主页内容 -->
+                <div id="homepageContent"> <!-- 默认显示 -->
+                    <div class="ye1">
+                        <ul class="personalData">
+                            <li style="margin-left: 10px;">我的个人简介：</li>
+                            <li>姓名：周雨林</li>
+                            <li>性别：男</li>
+                            <li>生日：5月20号</li>
+                            <li>学校：四川华新现代职业学院</li>
+                            <li>爱好：健身，骑行</li>
+                        </ul>
+                        <div class="boxblock">
+                            <img src="./img/photo1.png"/>
+                        </div>
+                    </div>
+                    
+                    <div class="ye1">
+                        <div class="boxblock">
+                            <img src="./img/photo2.png"/>
+                        </div>
+                        <div class="boxblock">
+                            <div class="text">
+                                <p>人生如一场漫长的旅行，充满了未知与挑战。每一段经历，都是我们成长的痕迹；每一个选择，都是我们前进的动力。有时，我们在路上迷茫、跌倒，甚至会质疑自己的方向，但正是这些困惑与失落，才让我们更加珍惜每一次的突破与进步。</p>
+                                <p>人生并非一条直线，而是一条曲折的路。我们可能会错过一些美好的时光，可能会遇到难以逾越的障碍，但这些都是生命的组成部分。重要的不是我们经历了什么，而是我们如何面对与坚持。当我们回首时，会发现那些痛苦和挫折，正是我们变得更加坚强与宽广的源泉</p>
+                                <p>活在当下，珍惜眼前的每一刻，拥抱每一次与他人的相遇，放下不必要的忧虑。人生短暂，何不以一颗平静的心去迎接所有的风雨呢？</p>
+                            </div>
+                        </div>
+                    </div>
+                     
+                     <div class="ye1">
+                        <div class="boxblock">
+                            <div class="text">
+                                <p>HTML（超文本标记语言，HyperText Markup Language）是一种用于创建网页和应用程序的标准标记语言。它通过一系列标签（元素）来描述网页的结构和内容。HTML 主要用于定义网页的文本、图片、视频、链接等内容的布局和显示方式。</p>
+                            </div>
+                        </div>
+                        <div class="boxblock">
+                            <img src="./img/photo3.png"/>
+                        </div>
+                     </div> 
+                    
+                </div>
+                
+                <!-- 我的偶像 -->
+                <div id="idolContent" class="hidden">
+                    <div class="container">
+                        <div style="text-align: center;padding: 20px;">
+                            <h1>我的偶像 - 胡歌</h1>
+                        </div>
+                        <img src="./img/huge.jpg" alt="胡歌的照片" style="width: 10vw;border-radius: 8px;">
+                        <h2>基本信息</h2>
+                        <p>姓名：胡歌</p>
+                        <p>出生日期：1982年9月20日</p>
+                        <p>职业：演员、歌手</p>
+                        <p>代表作品：《仙剑奇侠传》、《琅琊榜》、《猎场》</p>
+                        <h2>生平经历</h2>
+                        <p>胡歌，中国内地男演员，因其在电视剧《仙剑奇侠传》中饰演的李逍遥而成名。毕业于上海戏剧学院，胡歌在演艺生涯中凭借出色的演技和深厚的文化底蕴赢得了众多粉丝的喜爱。</p>                    
+                        <h2>个人魅力</h2>
+                        <p>胡歌有着阳光帅气的外形和温暖的气质。他不仅在演艺事业上取得了很大的成功，也积极参与公益活动，关心社会问题。他的真诚和努力深深打动了每一个支持他的粉丝。</p>                 
+                        <h2>粉丝互动</h2>
+                        <p>胡歌一直以来都非常关心他的粉丝，时常在社交平台上与大家分享自己的生活和工作动态。他与粉丝建立了深厚的情感联系，让大家感受到他不一样的真实一面。</p>
+                
+                    </div>
+                </div>
+                <!-- 我的相册 -->
+                <div id="albumContent" class="hidden">
+                    <div style="height: 10vh;">
+                        <h2 style="display: flex;height: 100%; justify-content: center;align-items: center;">我的相册</h2>
+                    </div>
+                    <div class="photo">
+                        <div class="photoimg"><img src="./img/photo01.jpg" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo02.jpg" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo03.jpg" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo04.jpg" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo05.webp" alt=""></div>
+                        <div class="photoimg"><img src="./img/background.png" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo1.png" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo2.png" alt=""></div>
+                        <div class="photoimg"><img src="./img/photo3.png" alt=""></div>   
+                        <div class="photoimg"><img src="./img/头像.png" alt=""></div>                 
+                    </div>
+                </div>
+
+                <div id="imageModal" class="modal">
+                    <span id="closeModal" class="close">&times;</span>
+                    <img id="modalImage" class="modal-content">
+                </div>
+                
+                <!-- 我的日志 -->
+                <div id="journalContent" class="hidden">
+                    <h2 style="display: flex;align-items: center;justify-content: center; height: 10vh;">我的日志</h2>
+                    <details open>
+                        <summary>日志 1</summary>
+                        <p>日期：2023年10月1日星期：星期日</p>
+                        <p>今天的天气格外晴朗，阳光透过窗帘洒在房间里，让我感到无比温暖。早上吃了一顿丰盛的早餐，煎蛋搭配烤面包，真是美味。之后，我决定去公园散步，享受这个美好的秋日。</p>
+                        <p>在公园里，看到很多人带着家人和宠物出来玩耍，孩子们在草坪上追逐嬉戏，笑声此起彼伏。我也找了个地方坐下，静静地看着周围的景象，内心顿时宁静了许多。晚上，我给自己准备了一顿简单的晚餐，吃完后泡了一杯茶，阅读了喜欢的书籍，充实而惬意的一天就这样结束了。</p>
+                    </details>
+                    <details open>
+                        <summary>日志 2</summary>
+                        <p>日期：2023年10月2日星期：星期一</p>
+                        <p>今天是新的一周的开始，工作上有些小压力。一大早就收到了一封关于项目进度的邮件，提醒我要尽快整理数据。午餐时间，我和同事一起去了附近的新餐厅，那里的一份牛肉面十分美味，瞬间缓解了我工作上的疲惫。</p>
+                        <p>下午开会时，团队讨论了下一阶段的计划，大家积极发言，气氛很融洽。我想，虽然周一总是有些忙碌，但有这样积极的同事们一起合作，确实让我感到幸運。晚上，我决定做一些运动，舒缓一天的紧张，去跑步啦。跑完步后，感觉整个人都轻松了许多。</p>
+                    </details>
+                    <details open>
+                        <summary>日志 3</summary>
+                        <p>日期：2023年10月3日
+                            星期：星期二</p>
+                        <p>今天早上醒来，外面下着小雨。我喜欢这样的天气，淅淅沥沥的雨声让人感到格外放松。在这样的日子里，总想宅在家里，喝杯热茶，看看书或者追剧。于是我决定提前完成工作，然后留出时间享受生活。</p>
+                        <p>工作期间，完成了一项重要的报告，心里松了一口气。回到家后，泡了一杯热茶，坐在沙发上阅读了一本新买的小说。这个故事情节引人入胜，让我完全沉浸其中。晚餐时，我随意做了点意大利面，简单又美味。今天的效率很高，心情也特别好，就这样结束了。</p>
+                    </details>
+                    <details open>
+                        <summary>日志 4</summary>
+                        <p>日期：2023年10月4日
+                            星期：星期三</p>
+                        <p>今天的心情不错，早上起来阳光明媚，窗外的风景让人感到充满活力。上班的路上，我特地走了一条不同的路线，发现了一家很有特色的小咖啡馆。决定下班后去试试。</p>
+                        <p>工作内容比较繁忙，特别是项目的最后阶段，大家都在加班加点。不过出乎意料的是，团队的合作氛围依旧很好，大家互相支持，效率高涨。午餐时，同事们一起分享了自己的周末计划，听到大家的期待让我也忍不住想要早点安排自己的休闲时间。</p>
+                        <p>下班后，我如约去了那家咖啡馆，点了一杯拿铁和一块蓝莓芝士蛋糕。坐在窗边，享受着美食和窗外的风景，心情格外愉悦。今天的工作虽然忙碌，但收获满满。</p>
+                    </details>
+                    <details open>
+                        <summary>日志 5</summary>
+                        <p>日期：2023年10月5日
+                            星期：星期四</p>
+                        <p>今天的天气略显阴沉，感觉快要下雨。早上起床有些懒散，但还是努力让自己精神起来。上班的途中，碰到了一些老朋友，聊了聊近况，发现彼此都在忙着各自的事情，但我们约定了有机会一起聚聚。</p>
+                        <p>工作上今天主要是进行数据分析，虽然有些枯燥，但最后得出的结论让我感到很有成就感。下午放松的时候，我听了一些轻音乐，专注地完成了手头的工作。</p>
+                    </details>
+                    <details open>
+                        <summary>日志 6</summary>
+                        <p>日期：2023年10月6日
+                            星期：星期五</p>
+                        <p>金色的周五终于来临，今天的工作节奏相对轻松。上午完成了一些关键任务，心里有种说不出的放松。午餐时，我和同事约好了一起去附近的新餐厅，那里提供的海鲜意大利面让人垂涎欲滴，大家吃得很开心。</p>
+                        <p>下午稍微安排了一些总结的工作，准备迎接下周的挑战。因为最近项目推进得不错，我们决定晚上聚餐庆祝一下。去了一个气氛不错的地方，享受了一顿丰盛的晚餐，大家交流很愉快，笑声不断。</p>
+                        <p>回到家后，心情格外愉悦，决定给自己放个小假，看看电影。今天的工作虽然忙碌，但收获满满。</p>
+                    </details>
+                </div>
+                
+                <!-- 我的音乐 -->
+                <div id="musicContent" class="hidden">
+                    <h2>我的音乐</h2>
+                    <p>这是我的音乐内容。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div style="display: inline-flex;height: 80px;align-items: center;">
+            <div id="timeDisplay" style="font-size: 30px;"></div>
+        </div>
+        <div class="vertical-carousel">
+            <div class="carousel-container">
+                <div class="carousel-item"><img src="./img/photo01.jpg" alt="图片 1"></div>
+                <div class="carousel-item"><img src="./img/photo02.jpg" alt="图片 2"></div>
+                <div class="carousel-item"><img src="./img/photo03.jpg" alt="图片 3"></div>
+                <div class="carousel-item"><img src="./img/photo04.jpg" alt="图片 4"></div>
+                <div class="carousel-item"><img src="./img/photo05.webp" alt="图片 5"></div>
+                <div class="carousel-item"><img src="./img/background.png" alt="图片 6"></div>
+                <div class="carousel-item"><img src="./img/photo1.png" alt="图片 7"></div>
+                <div class="carousel-item"><img src="./img/photo2.png" alt="图片 8"></div>
+            </div>
+            <button class="carousel-button prev" onclick="moveCarousel(-1)">&#9650;</button>
+            <button class="carousel-button next" onclick="moveCarousel(1)">&#9660;</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </aside>
+    <footer>
+        <p>版权所有&copy; 2025 周雨林 | 所有权利保留</p>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
